@@ -10,19 +10,24 @@
 	
 	<header class='header'>
 	<p id='PCSHOP_head'> PC SHOP </p>
-	<p id='link_head'>
+
+	<div id='link_head' >
 		<a href ="#" class="link_head" style='border-right: 1px white solid;'> My account </a>
 		<a href ="#" class="link_head"> Basket </a>
-	</p>
-		<?php
+	
+	<?php
 			echo "
-				<form action='' method='post' class='searchForm' >
-				<input type='text' name='search' value=''>
-				<span class='error'></span>
-				<button class='btton_search'>Search</button>
-				</form>
+				
+					<form action='' method='post' class='searchForm'>
+						<input type='text' name='search' value='' >
+						<span class='error'></span>
+						<button class='btton_search'>Search</button>
+					</form>
+				
 			";
 		?>
+	
+	</div>
 	
 	</header>
 

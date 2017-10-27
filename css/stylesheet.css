@@ -16,15 +16,15 @@ header {
 	background-color: rgb(42,81,79);
 	width:100%;
 	position:fixed;
-	top:0%;
-	left:0px;
+	top:0;
+	left:0;
 	z-index:2;
 
 
 } 
 
 #PCSHOP_head {
-	text-align: left;
+	
 	color: white;
 	font-size: 200%;
 	margin-left: 15%;
@@ -42,15 +42,27 @@ header {
 
 	color: white;
 	text-decoration: none;
-	padding: 0 1%;
-	font-size: 8px;
+	padding: 1%;
+	font-size: 12px;
+	
 }
 
+#link_head {
+	top:0;
+	right: 0;
+	position: absolute;
+	width: 50%;
+	height: 75%;
+	/*border: 1px white solid; */
+	text-align: right;
+}
 
-
-.searchForm * {
-	padding: 0;
-	margin: 0;
+.searchForm  {
+	
+	/*border: 1px red solid;*/
+	bottom: 0;
+	position: absolute;
+	
 }
 
 .btton_search {

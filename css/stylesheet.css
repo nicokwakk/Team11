@@ -1,0 +1,62 @@
+body {
+	width:99%;
+	height:100%;
+	background-color: rgb(42,81,79);
+	margin:0;
+	padding:0;
+	font-size:16px;
+	line-height:1.5;
+	font-family: 'Raleway';
+}
+
+#PCSHOP {
+	
+	text-align: center;
+	color: white;
+	margin-bottom: 5%;
+	font-size: 250%;
+}
+
+.login_form {
+	
+	text-align:center;
+	background: white;
+	width : 20%;
+	margin-left : 40%;
+	padding: 2% 1%;
+	border-radius: 10px;
+	color: rgb(42,81,79);
+}
+
+.login_form input[type=text] {
+
+	width:95%;
+	background-color: rgb(42,81,79);
+	border-radius: 6px;
+	border:0px;
+	font-size:16px;
+	padding:1px;
+}
+
+.btton_co {
+	
+	background-color: rgb(42,81,79);
+	width: 35%;
+	padding: 2%;
+	border-radius: 10px;
+	color: white;
+	box-shadow:0;
+	border:0px;
+	
+}
+
+.link_co {
+	
+	background-color: rgb(42,81,79);
+	width: 40%;
+	padding: 2%;
+	border-radius: 10px;
+	color: white;
+	text-decoration:none;
+	
+}

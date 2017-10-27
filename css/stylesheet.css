@@ -26,8 +26,8 @@ header {
 #PCSHOP_head {
 	
 	color: white;
-	font-size: 200%;
-	margin-left: 15%;
+	font-size: 35px;
+	margin: 1% 0 1% 15%;
 }
 
 #PCSHOP {
@@ -42,17 +42,17 @@ header {
 
 	color: white;
 	text-decoration: none;
-	padding: 1%;
+	padding: 0 4%;
 	font-size: 12px;
 	
 }
 
 #link_head {
-	top:0;
+	top:1%;
 	right: 0;
 	position: absolute;
 	width: 50%;
-	height: 75%;
+	height: 90%;
 	/*border: 1px white solid; */
 	text-align: right;
 }
@@ -71,6 +71,8 @@ header {
 	color: white;
 	box-shadow:0;
 	border:0px;
+	line-height: 1.5;
+	margin-left: -1;
 
 }
 
@@ -80,7 +82,7 @@ header {
 	background: white;
 	width : 20%;
 	margin-left : 40%;
-	padding: 2% 1%;
+	padding: 0 1% 4% 1%;
 	border-radius: 10px;
 	color: rgb(42,81,79);
 }

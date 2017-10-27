@@ -1,6 +1,6 @@
-<?php include('include/include_metaData.php');  ?>
+	<?php include('include/include_metaData.php');  ?>
 
-<body> 
+<body style ="background-color: rgb(42,81,79);"> 
 <?php 
 // PHP code goes here 
 echo " <p id='PCSHOP'> PC SHOP </p>"; 

@@ -13,11 +13,11 @@ echo "
 <form action='' class=''>
   Email: <input type='text' name='log'><br>
   Password: <input type='text' name='passw'><br>
-  <a> Forgot your password ?</a> <br>
+  <a id='forgot_pw' href=''> Forgot your password ?</a> <br>
   <input type='submit' value='Submit' class='btton_co'>
 </form> 
-<p> Don't have an account </p>
-<a href='' class = 'link_co'> Create an account </a>
+<p id='border_text'> Don't have an account ?</p>
+<a href='' class = 'link_co'> Create Account </a>
 </div>
 ";
 ?> 

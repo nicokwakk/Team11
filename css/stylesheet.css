@@ -20,7 +20,6 @@ header {
 	left:0;
 	z-index:2;
 
-
 } 
 
 #PCSHOP_head {
@@ -51,8 +50,8 @@ header {
 	top:1%;
 	right: 0;
 	position: absolute;
-	width: 50%;
-	height: 90%;
+	width: 25%;
+	height: 85%;
 	/*border: 1px white solid; */
 	text-align: right;
 }
@@ -80,10 +79,10 @@ header {
 	
 	text-align:center;
 	background: white;
-	width : 20%;
-	margin-left : 40%;
+	
+	margin : 0 40%;
 	padding: 0 1% 4% 1%;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: rgb(42,81,79);
 }
 
@@ -108,7 +107,7 @@ header {
 	color: white;
 	box-shadow:0;
 	border:0px;
-
+	margin-top: 4%;
 	
 }
 
@@ -121,4 +120,22 @@ header {
 	color: white;
 	text-decoration:none;
 	
+}
+
+#border_text{
+	border-top: 1px solid rgb(42,81,79);
+	padding-top: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#forgot_pw, #forgot_pw:visited {
+	
+	font-size: 10px;
+	margin-top: 0;
+	margin-bottom: 2%;
+	text-decoration: none;
+	color: rgb(42,81,79);
+	margin-right: 50%;
+
 }

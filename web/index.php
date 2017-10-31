@@ -17,9 +17,11 @@ echo "
   <input type='submit' value='Submit' class='btton_co'>
 </form> 
 <p id='border_text'> Don't have an account ?</p>
-<a href='' class = 'link_co'> Create Account </a>
+<a href='' class = 'link_co' onclick='openbox('Inscription médecin', 1)'> Create Account </a>
 </div>
 ";
 ?> 
+
+
 </body> 
 </html>

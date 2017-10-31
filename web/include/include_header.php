@@ -8,7 +8,7 @@
 	</head>
 	<body>
 	
-	<header class='header'>
+	<header class='header' >
 		<p id='PCSHOP_head'> PC SHOP </p>
 
 		<div id='link_head' >
@@ -43,10 +43,10 @@
 
 			<div id="snd_head_global">
 		<div class="snd_head_big">
-				<a class="head_link" href=""> Free Delivery on Orders <span class="hidden"> aaaaaaa </span> </a>
+				<a class="head_link" href=""> Free Delivery on Orders <span class="hidden"> aaaaaaaaaaaaaaaa </span> </a>
 		</div>
 		<div class="snd_head_big">
-				<a class="head_link" href=""> Finance Options <span class="hidden"> aaaaaaaaaaa </span> </a>
+				<a class="head_link" href=""> Finance Options <span class="hidden"> aaaaaaaaaaaaaaaaaaaa </span> </a>
 		</div>
 		<div class="snd_head_big">
 					<a class="head_link" href=""> Click and Collect from any of our store </a>

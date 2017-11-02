@@ -72,8 +72,8 @@ header {
 	color: white;
 	box-shadow:0;
 	border:0px;
-	line-height: 1.5;
-	margin-left: -1;
+	line-height: 1.7;
+	margin-left: -3;
 
 }
 
@@ -160,23 +160,20 @@ header {
 	text-align: center;
 	display: inline;
 	border: rgb(42,81,79) 0.5px solid;
-	width: 22%;
-	
-	padding: 3% 0;
+	width: 21%;
+	padding: 1% 0.5%; 
 	display: inline-block;
 	
 }
 
-
-
 .snd_head_big:hover {
-	color:white;
+	
 	background-color: rgb(42,81,79);
 }
 
 #snd_head_global {
-	margin-left: 16.5%;
-	width:67%;
+	margin-left: 16%;
+	width:72%;
 }
 
 .head_link {

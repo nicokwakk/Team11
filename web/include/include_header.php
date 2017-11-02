@@ -41,18 +41,17 @@
 
 		</header>
 
-			<div id="snd_head_global">
-		<div class="snd_head_big">
-				<a class="head_link" href=""> Free Delivery on Orders <span class="hidden"> aaaaaaa </span> </a>
-		</div>
-		<div class="snd_head_big">
-				<a class="head_link" href=""> Finance Options <span class="hidden"> aaaaaaaaaaa </span> </a>
-		</div>
-		<div class="snd_head_big">
-					<a class="head_link" href=""> Click and Collect from any of our store </a>
+		<div id="snd_head_global">
+			<div class="snd_head_big">
+					<a class="head_link" href=""> Free Delivery on Orders <span class="hidden"> aaaaaaa </span> </a>
 			</div>
-		</head>
-		<div class="snd_head_big">
+			<div class="snd_head_big">
+					<a class="head_link" href=""> Finance Options <span class="hidden"> aaaaaaaaaaa </span> </a>
+			</div>
+			<div class="snd_head_big">
+						<a class="head_link" href=""> Click and Collect from any of our store </a>
+			</div>
+			<div class="snd_head_big">
 					<a class="head_link" href=""> Need Help ? Contact our support team </a>
 			</div>
 		</div>

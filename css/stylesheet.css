@@ -7,11 +7,13 @@ body {
 	font-size:16px;
 	line-height:1.5;
 	font-family: 'Raleway';
-
 	
-
 }
 
+.main_body {
+	
+	margin-top: 18vh;
+}
 
 header {
 	
@@ -56,7 +58,7 @@ header {
 	top:1%;
 	right: 0;
 	position: absolute;
-	width: 35%;
+	width: 50%;
 	height: 85%;
 	/*border: 1px white solid; */
 	text-align: right;
@@ -64,16 +66,16 @@ header {
 
 .searchForm  {
 	
-	/* border: 1px red solid; */
+	/*border: 1px red solid; */
 	bottom: 0;
 	position: absolute;
 	height:40%;
-	width:65%;
+	width:70%;
 }
 
 
 
-.searchForm  input {
+.searchForm input {
 	
 	height:100%;
 	width:75%;

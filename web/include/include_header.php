@@ -6,7 +6,7 @@
 		<link rel='stylesheet' href='../css/stylesheet.css' />
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 	</head>
-	<body>
+	<body class ="main_body">
 	
 	<header class='header' >
 		<p id='PCSHOP_head'> PC SHOP </p>
@@ -41,7 +41,7 @@
 
 		</header>
 
-
+		<!--
 		<div id="snd_head_global">
 			<div class="snd_head_big">
 					<a class="head_link" href=""> Free Delivery on Orders <span class="hidden"> aaaaaaaaaaaaaaaaaaaaaaaa </span> </a>
@@ -56,10 +56,6 @@
 					<a class="head_link" href=""> Need Help ? Contact our support team </a>
 			</div>
 		</div>
-
-		
+		-->
 		
 	
-
-</body>
-</html>

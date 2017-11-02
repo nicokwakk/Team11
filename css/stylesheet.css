@@ -8,7 +8,7 @@ body {
 	line-height:1.5;
 	font-family: 'Raleway';
 
-	margin-top: 10%;
+	
 
 }
 
@@ -172,8 +172,14 @@ header {
 }
 
 #snd_head_global {
+<<<<<<< HEAD
 	margin-left: 16%;
 	width:72%;
+=======
+	margin-left: 18%;
+	width:65%;
+	margin-top: 10%;
+>>>>>>> 48ef4bbe07b413005341f5e88e88be4418ff356a
 }
 
 .head_link {

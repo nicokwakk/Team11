@@ -48,11 +48,15 @@ header {
 	
 }
 
+.link_head:hover {
+	font-weight:bold;
+}
+
 #link_head {
 	top:1%;
 	right: 0;
 	position: absolute;
-	width: 25%;
+	width: 35%;
 	height: 85%;
 	/*border: 1px white solid; */
 	text-align: right;
@@ -60,10 +64,19 @@ header {
 
 .searchForm  {
 	
-	/*border: 1px red solid;*/
+	/* border: 1px red solid; */
 	bottom: 0;
 	position: absolute;
+	height:40%;
+	width:65%;
+}
+
+
+
+.searchForm  input {
 	
+	height:100%;
+	width:75%;
 }
 
 .btton_search {
@@ -72,9 +85,17 @@ header {
 	color: white;
 	box-shadow:0;
 	border:0px;
-	line-height: 1.7;
-	margin-left: -3;
+	width:20%;
+	margin-left:-1;
+	height:100%;
 
+}
+
+.btton_search:hover {
+	
+	font-weight:bold;
+	background-color: rgb(34,112,92);
+	
 }
 
 .login_form {
@@ -124,6 +145,7 @@ header {
 	
 }
 
+
 #border_text{
 	border-top: 1px solid rgb(42,81,79);
 	padding-top: 1%;
@@ -172,14 +194,12 @@ header {
 }
 
 #snd_head_global {
-<<<<<<< HEAD
+
 	margin-left: 16%;
 	width:72%;
-=======
-	margin-left: 18%;
-	width:65%;
-	margin-top: 10%;
->>>>>>> 48ef4bbe07b413005341f5e88e88be4418ff356a
+
+	margin-top: 8%;
+
 }
 
 .head_link {

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8'>
-		<title> PC SHOP </title>
-		<link rel='stylesheet' href='../css/stylesheet.css' />
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-	</head>
-	<body class ="main_body">
-	
-	<header class='header' >
+		<header class='header' >
 		<p id='PCSHOP_head'> PC SHOP </p>
 
 		<div id='link_head' >
@@ -40,22 +30,8 @@
 		</div>
 
 		</header>
-
-		<!--
-		<div id="snd_head_global">
-			<div class="snd_head_big">
-					<a class="head_link" href=""> Free Delivery on Orders <span class="hidden"> aaaaaaaaaaaaaaaaaaaaaaaa </span> </a>
-			</div>
-			<div class="snd_head_big">
-					<a class="head_link" href=""> Finance Options <span class="hidden"> aaaaaaaaaaaaaaaaaaaaaaaaaa </span> </a>
-			</div>
-			<div class="snd_head_big">
-						<a class="head_link" href=""> Click and Collect from any of our store </a>
-			</div>
-			<div class="snd_head_big">
-					<a class="head_link" href=""> Need Help ? Contact our support team </a>
-			</div>
-		</div>
-		-->
+		
+		<body class ="main_body">
+		
 		
 	

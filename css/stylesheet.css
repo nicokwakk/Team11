@@ -7,11 +7,11 @@ body {
 	font-size:16px;
 	line-height:1.5;
 	font-family: 'Raleway';
-	
+
 }
 
 .main_body {
-	
+
 	margin-top: 18vh;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 header {
-	
+
 	background-color: rgb(42,81,79);
 	width:100%;
 	position:fixed;
@@ -29,17 +29,17 @@ header {
 	left:0;
 	z-index:2;
 
-} 
+}
 
 #PCSHOP_head {
-	
+
 	color: white;
 	font-size: 35px;
 	margin: 1% 0 1% 15%;
 }
 
 #PCSHOP {
-	
+
 	text-align: center;
 	color: white;
 	margin-bottom: 5%;
@@ -52,7 +52,7 @@ header {
 	text-decoration: none;
 	padding: 0 4%;
 	font-size: 12px;
-	
+
 }
 
 .link_head:hover {
@@ -70,7 +70,7 @@ header {
 }
 
 .searchForm  {
-	
+
 	/*border: 1px red solid; */
 	bottom: 0;
 	position: absolute;
@@ -81,13 +81,13 @@ header {
 
 
 .searchForm input {
-	
+
 	height:100%;
 	width:75%;
 }
 
 .btton_search {
-	
+
 	background-color: rgb(34,102,92);
 	color: white;
 	box-shadow:0;
@@ -99,17 +99,17 @@ header {
 }
 
 .btton_search:hover {
-	
+
 	font-weight:bold;
 	background-color: rgb(34,112,92);
-	
+
 }
 
 .login_form {
-	
+
 	text-align:center;
 	background: white;
-	
+
 	margin : 0 40%;
 	padding: 0 1% 4% 1%;
 	border-radius: 20px;
@@ -124,12 +124,13 @@ header {
 	border:0px;
 	font-size:16px;
 	padding:1px;
+	color:white;
 }
 
 
 
 .btton_co {
-	
+
 	background-color: rgb(42,81,79);
 	width: 35%;
 	padding: 2%;
@@ -138,18 +139,18 @@ header {
 	box-shadow:0;
 	border:0px;
 	margin-top: 4%;
-	
+
 }
 
 .link_co {
-	
+
 	background-color: rgb(42,81,79);
 	width: 40%;
 	padding: 2%;
 	border-radius: 10px;
 	color: white;
 	text-decoration:none;
-	
+
 }
 
 
@@ -161,7 +162,7 @@ header {
 }
 
 #forgot_pw, #forgot_pw:visited {
-	
+
 	font-size: 10px;
 	margin-top: 0;
 	margin-bottom: 2%;
@@ -173,39 +174,40 @@ header {
 
 .snd_head {
 	background-color: white;
-	margin-left: 15%;
+	margin-left: 10%;
 	text-align: center;
 	position: absolute;
 	border-bottom: rgb(42,81,79) 0.5px solid;
 	border-left: rgb(42,81,79) 0.5px solid;
 	border-right: rgb(42,81,79) 0.5px solid;
 	padding: 0.5%;
-	width: 70%;
+	width: 80%;
 }
 
 .snd_head_big {
 	background-color: white;
-	margin: 1%;
+	margin: 0.5%;
 	text-align: center;
 	display: inline;
 	border: rgb(42,81,79) 0.5px solid;
-	width: 21%;
-	padding: 1% 0.5%; 
-	display: inline-block;
 	
+	max-width: 24%;
+	padding: 1% 0%;
+	display: inline-block;
+
 }
 
 .snd_head_big:hover {
-	
+
 	background-color: rgb(42,81,79);
 }
 
 #snd_head_global {
 
-	margin-left: 16%;
-	width:72%;
-
-	margin-top: 8%;
+	margin:auto;
+	width: 75%;
+	/*border : 1px solid black;*/
+	margin-top: 160px;
 
 }
 
@@ -226,6 +228,7 @@ header {
 	color:white;
 	background-color: rgb(42,81,79);
 }
+
 
 .hidden {
 	visibility: hidden;

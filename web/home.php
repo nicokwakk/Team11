@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
 <?php include('include/include_metaData.php'); ?>
@@ -5,17 +8,17 @@
 </head>
 
 <div id="snd_head_global">
-			<div class="snd_head_big">
-					<a class="head_link" href="">Free Delivery on Orders <span class="hidden">aaaaaaaaaaaa</span></a>
+			<div class="snd_head_big snd_head_big_2">
+					<a class="head_link" href="">Free Delivery on Orders</a>
+			</div>
+			<div class="snd_head_big snd_head_big_2">
+					<a class="head_link" href="">Finance Options</a>
 			</div>
 			<div class="snd_head_big">
-					<a class="head_link" href="">Finance Options <span class="hidden">aaaaaaaaaa</span></a>
+						<a class="head_link" href="">Click and Collect from any of our store</a>
 			</div>
 			<div class="snd_head_big">
-						<a class="head_link" href=""> Click and Collect from any of our store </a>
-			</div>
-			<div class="snd_head_big">
-					<a class="head_link" href=""> Need Help ? Contact our support team </a>
+					<a class="head_link" href="">Need Help ? Contact our support team</a>
 			</div>
 		</div>
 <div class="main_div">

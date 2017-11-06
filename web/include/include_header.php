@@ -2,18 +2,19 @@
 		<p id='PCSHOP_head'> PC SHOP </p>
 
 		<div id='link_head' >
-			<a href ="#" class="link_head" style='border-right: 1px white solid;'> My account </a>
-			<a href ="#" class="link_head"> Basket </a>
-		
+
+		<a href ='' class='link_head' style='border-right: 1px white solid;'> My Account </a>
+		<a href ="#" class="link_head"> Basket </a>
+
 		<?php
 				echo "
-					
+
 						<form action='' method='post' class='searchForm'>
 							<input type='text' name='search' value='' >
 							<span class='error'></span>
 							<button class='btton_search'>Search</button>
 						</form>
-					
+
 				";
 			?>
 		</div>
@@ -30,8 +31,5 @@
 		</div>
 
 		</header>
-		
+
 		<body class ="main_body">
-		
-		
-	

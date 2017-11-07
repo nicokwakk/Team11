@@ -7,6 +7,7 @@ body {
 	font-size:16px;
 	line-height:1.5;
 	font-family: 'Raleway';
+	padding-bottom: 6rem;
 
 }
 
@@ -232,4 +233,57 @@ header {
 
 .hidden {
 	visibility: hidden;
+}
+
+footer {
+	height:18%;
+	width:101%;
+	bottom:0;
+	margin-top :10%;
+	margin-bottom:0;
+	background-color: #efefef;
+	background-color: rgb(42,81,79);
+	color: white;
+	text-align:center;
+	
+	
+}
+
+.icon {
+	height: 15px;
+	width:15px;
+}
+
+.footer_div {
+	height:70%;
+	padding:1%;
+}
+.footer_div div {
+	top:0;
+	display:inline-block;
+	width:30%;
+	height:95%;
+	position:relative;
+}
+
+.footer_div1 {
+	
+	border-right: 2.5px white solid;
+	
+}
+
+.footer_div2 {
+	
+	width: 35%;
+	
+}
+
+.footer_div3 {
+	
+	border-left: 2.5px white solid;
+}
+footer div  a {
+	text-decoration:none;
+	color:white;	
+	width:30%;
 }

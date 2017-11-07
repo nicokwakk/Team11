@@ -35,5 +35,9 @@ session_start();
 		Nullam posuere, nunc at rhoncus dapibus, justo nisi varius lectus, vitae tincidunt erat urna in velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec commodo sapien neque, a tempor augue maximus ac. Ut fermentum pulvinar urna, a hendrerit tellus hendrerit sed. Proin auctor arcu nec leo egestas vehicula non a turpis. Phasellus sollicitudin arcu ipsum, ac iaculis magna porttitor elementum. Ut pretium orci ultrices sodales finibus. Mauris lobortis turpis porttitor diam finibus, ac maximus justo scelerisque. Integer quis vulputate nibh, in pulvinar massa. Mauris sed dolor id velit sagittis scelerisque sit amet vel purus. Integer ullamcorper justo suscipit enim pulvinar, id pulvinar neque bibendum. Suspendisse a fermentum nunc. Phasellus tincidunt laoreet massa, id facilisis sem malesuada non. Nulla facilisi. Vestibulum nulla tortor, dignissim sed aliquam eget, rhoncus a nibh. Vivamus sagittis, mauris ut ultrices tincidunt, risus nisl semper elit, vitae sagittis ligula elit vitae erat.
 		</p>
 	</div>
+
+
+	
 </body>
+<?php include('include/include_footer.php'); ?>
 </html>

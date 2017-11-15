@@ -11,8 +11,8 @@ body {
 }
 
 .main_body {
-	
-	margin-top: 18vh;
+	width: 95%;
+	margin-top: 23vh;
 }
 
 header {
@@ -76,19 +76,19 @@ header {
 
 .searchForm input {
 	
-	height:100%;
+	height:60%;
 	width:70%;
 }
 
 .btton_search {
 	
-	background-color: rgb(34,102,92);
+	
 	color: white;
 	box-shadow:0;
 	border:0px;
 	width:25%;
 	margin-left:-1;
-	height:100%;
+	height:80%;
 
 }
 
@@ -110,15 +110,6 @@ header {
 	color: rgb(42,81,79);
 }
 
-.login_form input[type=text] {
-
-	width:95%;
-	background-color: rgb(42,81,79);
-	border-radius: 6px;
-	border:0px;
-	font-size:16px;
-	padding:1px;
-}
 
 
 
@@ -174,6 +165,7 @@ header {
 	border-left: rgb(42,81,79) 0.5px solid;
 	border-right: rgb(42,81,79) 0.5px solid;
 	padding: 0.5%;
+	padding-top: 1%;
 	width: 96%;
 }
 
@@ -205,8 +197,8 @@ header {
 
 	margin:auto;
 	width: 95%;
-	/*border : 1px solid black; */
-	margin-top: 160px;
+	/*border : 1px solid black;
+	margin-top: 160px; */
 }
 
 .head_link {
@@ -230,3 +222,84 @@ header {
 .hidden {
 	visibility: visible;
 }
+
+footer {
+	margin-top: 4%;
+	width: 101%;
+}
+
+.product_thumb {
+	width: 30%;
+}
+
+.main_div {
+	margin-left: auto;
+	margin-right: auto;
+	width : 90%;
+}
+
+.banner{
+	width:80%;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.product_images {
+	width: 25%;
+}
+
+.product_options{	
+	width:30%;
+}
+
+.del_options{
+	width:25%;
+}
+
+.product_img {
+	width:auto;
+	height:100%;
+	max-height:150px;
+	max-width:200px;
+	display:inline-block;
+	vertical-align:top;
+	padding-right:5%;
+}
+
+#productSpecs{
+	width:100%;
+	
+}
+#productRvws{
+	width:100%;
+}
+
+.review_form input, .review_form textarea {
+	width:80% ;
+	
+}
+
+.modal-body {padding: 2px 16px 8px ;
+text-align:center;
+padding-bottom: 12%;}
+
+.modal-content {
+	
+    width: 70%;
+}
+
+.Form  {
+	width: 60%;
+}
+
+.register_form {
+
+	text-align:center;
+	background: white;
+	margin : 0 5%;
+	padding: 0 1% 4% 1%;
+	border-radius: 20px;
+	color: rgb(42,81,79);
+}
+

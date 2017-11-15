@@ -1,28 +1,28 @@
-<!DOCTYPE html>
-<html lang='en'>
+<?php include('include/include_metaData.php'); ?>
+<html>
+<head>
+	<?php include('include/include_header.php'); ?>
+</head>
 
-	<head><?php include('include/include_metaData.php');  ?></head>
-
-<body style ="background-color: rgb(42,81,79); ">
-<?php
-// PHP code goes here
-echo " <p id='PCSHOP'> PC SHOP </p>";
-// Declare a variable
-//$name = "John Smith";
-//echo "My name is ".$name."<br>";
-echo "
-<div class='login_form' >
-<h2> Login</h2>
-<form method='post' action='include/process_login.php' class=''>
-  Email: <input type='text' class='form_input_white' name='email'><br>
-  Password: <input type='text' class='form_input_white' name='passw'><br>
-  <a id='forgot_pw' href=''> Forgot your password ?</a> <br>
-  <input type='submit' value='Submit' class='btton_co'>
-</form>
-<p id='border_text'> Don't have an account ?</p>
-<a href='' class = 'link_co'> Create Account </a>
-</div>
-";
-?>
+<div id="snd_head_global">
+			<div class="snd_head_big snd_head_big_2">
+					<a class="head_link" href="">Free Delivery on Orders</a>
+			</div>
+			<div class="snd_head_big snd_head_big_2">
+					<a class="head_link" href="">Finance Options</a>
+			</div>
+			<div class="snd_head_big">
+						<a class="head_link" href="">Click and Collect from any of our store</a>
+			</div>
+			<div class="snd_head_big">
+					<a class="head_link" href="">Need Help ? Contact our support team</a>
+			</div>
+		</div>
+		<div class="main_div">
+			<div class="banner">
+				<img id="ad_banner" src="../images/Icons/ad1.png">
+		</div>
+	</div>
 </body>
+<?php include('include/include_footer.php'); ?>
 </html>

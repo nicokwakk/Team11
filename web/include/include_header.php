@@ -1,16 +1,40 @@
+<?php
+?>
 		<header class='header' >
-		<p id='PCSHOP_head'> PC SHOP </p>
-
+		<p id='PCSHOP_head'><a id="headhome" href="index.php"> PC SHOP </a></p>
 		<div id='link_head' >
-
-		<a href ='' class='link_head' style='border-right: 1px white solid;'> My Account </a>
-		<a href ="#" class="link_head"> Basket </a>
-
+		<?php
+		if(!(isset($_SESSION['loggedin'])) || ($_SESSION['loggedin'] == false)){
+		echo "<a href ='login.php' class='link_head' style='border-right: 1px white solid;'> Log In </a>";
+	}else{
+		$sesh = session_id();
+		$email_query = "select CustEmail from customers where CustSessionID = '$sesh'";
+		$email_prep = $mysql->prepare($email_query);
+		$email_prep->execute();
+		$email_result = $email_prep->fetchAll();
+		$email ='';
+		foreach($email_result as $row){
+			$email = $row['CustEmail'];
+		}
+		echo "
+		<div class='dropdown'>
+		<button class='dropbtn'>$email</button>
+		<div class='dropdown-content'>
+			<a id='drop' href='account.php'>View Account</a>
+			<a id='drop' href='account.php#wishlist'>View Wishlist</a>
+		<a id='drop' href='include/process_logout.php'>Logout</a>
+		</div>
+		</div>
+		";
+	}
+		?>
+		<?php
+		echo "<a href ='basket.php' class='link_head'> Basket ($basketCount)</a>";
+		?>
 		<?php
 				echo "
-
-						<form action='' method='post' class='searchForm'>
-							<input type='text' name='search' value='' >
+						<form action='../web/allProducts.php' method='post' class='searchForm'>
+							<input type='text' id='searchbar' name='search' value='' >
 							<span class='error'></span>
 							<button class='btton_search'>Search</button>
 						</form>
@@ -19,17 +43,16 @@
 			?>
 		</div>
 		<div class="snd_head">
-
-				<a class="head_link" href=""> All products </a>
-				<a class="head_link" href=""> Laptops </a>
-				<a class="head_link" href=""> Desktops </a>
-				<a class="head_link" href=""> Ipads And Tablets </a>
-				<a class="head_link" href=""> Accesories </a>
-				<a class="head_link" href=""> Printers </a>
-				<a class="head_link" href=""> TV and Photo </a>
-				<a class="head_link" href=""> Repairs </a>
+				<a class="head_link" href="allProducts.php"> All products </a>
+				<a class="head_link" href="allProducts.php?sort=Laptop"> Laptops </a>
+				<a class="head_link" href="allProducts.php?sort=Desktop"> Desktops </a>
+				<a class="head_link" href="allProducts.php?sort=Tablet"> Ipads And Tablets </a>
+				<a class="head_link" href="allProducts.php?sort=Accessory"> Accessories </a>
+				<a class="head_link" href="allProducts.php?sort=Printer"> Printers </a>
+				<a class="head_link" href="allProducts.php?sort=Monitor"> Monitors </a>
 		</div>
 
 		</header>
 
-		<body class ="main_body">
+		<body>
+			<div class ="main_body">

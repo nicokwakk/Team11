@@ -1,3 +1,4 @@
+</div>
 <footer>
 	<div class ='footer_div'>
 		<div class ='footer_div1'>
@@ -9,7 +10,7 @@
 		<div class ='footer_div2'>
 			<h5> Need help ? </h5>
 			<a href="#"> Submit a support ticket </a> <br>
-			<a href="#"> Email us here </a> <br>
+			<a href="#"> Email us here </a> /
 			<a href="#"> Phone us here </a> 
 		</div>
 		
@@ -19,3 +20,4 @@
 		</div>
 	</div>
 </footer>
+</body>

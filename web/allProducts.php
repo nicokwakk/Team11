@@ -65,11 +65,11 @@
 	<div class='allProducts'>
 		<p> <img id='arrow_menu' src='../images/Icons/arrow_menu.png'> </p>
 		<div class='filterForm'>
-			
+
 
 				<div id="filterPrice"> <!--holds the different price options-->
 					<form method="post" action="<?php ($_SERVER["PHP_SELF"]);?>">
-						<p class="accordion_ap"> Price </p>
+						<p class="accordion_ap"> Price: </p>
 						<div class="panel_ap">
 						  <p>
 						 <!--The [] is so I can access each set of checkboxes as an array-->
@@ -304,7 +304,8 @@
 				  $desc = $row['ProductDesc'];
 				  echo "<div class='product_thumb'>";
 				  echo "<div class='product_thumbimgcont'>";
-				  echo "<img src='$image/1.jpg' border='0' class='product_thumbimg'/>";
+					$image=$image.'\\'.'1.jpg';
+				  echo "<img src='$image' border='0' class='product_thumbimg'/>";
 				  echo "</div>";
 					echo "$brand $name";
 					echo "<br>";
@@ -333,7 +334,7 @@
 
 
 <style>
-	
+
 
 </style>
 
@@ -349,9 +350,10 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
-    }
+    } 
   }
 }
+
 document.querySelector("#arrow_menu").onclick = function() {
 if (window.getComputedStyle(document.querySelector('.filterForm')).display=='none'){
 document.querySelector(".filterForm").style.display="block";

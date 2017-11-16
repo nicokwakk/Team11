@@ -37,7 +37,7 @@ $price = (isset($_POST['price']) ? $_POST['price'] : ' ');
         //Setup our new file path
         $pwd = ("C:".DIRECTORY_SEPARATOR."websites".DIRECTORY_SEPARATOR."2017-ac32006".DIRECTORY_SEPARATOR."team11".DIRECTORY_SEPARATOR."images");
         $actualdir = ($pwd.DIRECTORY_SEPARATOR.$_POST['type'].DIRECTORY_SEPARATOR.$_POST['brand'].DIRECTORY_SEPARATOR.$_POST['productName']);
-        $actualdirdb = ("C:".DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR."websites".DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR."2017-ac32006".DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR."team11".DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR."images".DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR.$_POST['type'].DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR.$_POST['brand'].DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR.$_POST['productName']);
+        $actualdirdb = ("/images".'/'.$_POST['type'].'/'.$_POST['brand'].'/'.$_POST['productName']);
         echo $actualdir;
         if (!file_exists($pwd.DIRECTORY_SEPARATOR.$_POST['type'].DIRECTORY_SEPARATOR.$_POST['brand'].DIRECTORY_SEPARATOR.$_POST['productName'])) {
             mkdir($pwd.DIRECTORY_SEPARATOR.$_POST['type'].DIRECTORY_SEPARATOR.$_POST['brand'].DIRECTORY_SEPARATOR.$_POST['productName'], 0777, true);

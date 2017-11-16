@@ -46,10 +46,27 @@ $branch = $_SESSION['branch'];
     ?>
   </tbody>
   <table>
+    <h2>Edit Customer</h2>
+    <form action="https://zeno.computing.dundee.ac.uk/2017-ac32006/team11/web/editCustomer.php?custID=<?php echo $custID ?>">
+      <label for='custID'>Select Email of Customer to Remove</label>
+      <select name='custID'>
+        <?php
+        foreach($stock_results as $row){
+          ?>
+          <?php
+          $custID= $row['CustID'];
+          $email = $row['CustEmail'];
+          echo"
+        <option value='$custID'>$email</option>
+          ";
+        }
+        ?>
+      </select>
+      <input type='submit' name='submit'>
+    </form>
   <br>
   <h2>Remove Customer</h2>
-  <hr>
-  <form action="https://zeno.computing.dundee.ac.uk/2017-ac32006/team11/web/removeCustomer.php?custID=">
+  <form action="https://zeno.computing.dundee.ac.uk/2017-ac32006/team11/web/removeCustomer.php?custID=<?php echo $custID ?>">
     <label for='custID'>Select Email of Customer to Remove</label>
     <select name='custID'>
       <?php

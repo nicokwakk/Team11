@@ -14,6 +14,8 @@
 		  <?php
 				$productName=$brand=$price=$type=$imagePath=$productDesc="";
 				$productNameErr=$brandErr=$priceErr=$typeErr=$imagePathErr=$productDescErr=$productSpecErr[]="";
+				$upload = (isset($_POST['upload']) ? $_POST['upload'] : '');
+
 
 				if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					if(empty($_POST["productName"])){ //checking if required box is empty
@@ -75,17 +77,36 @@
 
 
 
-					if(empty($_POST["fileToUpload"]))
+					if(isset($_FILES['upload']))
 					{
+						  $cwd = getcwd().DIRECTORY_SEPARATOR;
 
-							$target_dir = "../images/"  .$brand; //we want to store the img in the img folder underneath the brand and then the name
-						  $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-							echo $target_file;
+							$total = count($_FILES['upload']['name']);
+
+						// Loop through each file
+						for($i=0; $i<$total; $i++) {
+						  //Get the temp file path
+						  $tmpFilePath = $_FILES['upload']['tmp_name'][$i];
+
+						  //Make sure we have a filepath
+						  if ($tmpFilePath != ""){
+						    //Setup our new file path
+						    $newFilePath = "C:".DIRECTORY_SEPARATOR."websites".DIRECTORY_SEPARATOR."2017-ac32006".DIRECTORY_SEPARATOR."team11".DIRECTORY_SEPARATOR.$brand.DIRECTORY_SEPARATOR.$productName.$_FILES['upload']['name'][$i];
+								echo $newFilePath;
+						    //Upload the file into the temp dir
+						    if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+						      //Handle other code here
+
+						    }
+						  }
+						}
+					}
+							/*echo $target_file;
 						  $uploadOk = 1;
 						  $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 						  // Check if image file is a actual image or fake image
 						  if(isset($_POST["submit"])) {
-						      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+						      $check = getimagesize($_FILES["upload"]["tmp_name"]);
 						      if($check !== false) {
 						          echo "File is an image - " . $check["mime"] . ".";
 						          $uploadOk = 1;
@@ -102,7 +123,7 @@
 						  }
 
 						  // Check file size
-						  if ($_FILES["fileToUpload"]["size"] > 500000) {
+						  if ($_FILES["upload"]["size"] > 500000) {
 						     echo "Sorry, your file is too large.";
 						     $uploadOk = 0;
 						  }
@@ -120,10 +141,8 @@
 						  // if everything is ok, try to upload file
 						  }
 						  else {
-						      if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-						          echo "The file ". basename( $_FILES["fileToUpload"]["productName"]). " has been uploaded.";
-						      } else {
-						          echo "Sorry, there was an error uploading your file.";
+						      if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
+
 						      }
 						  }
 					}
@@ -142,7 +161,9 @@
 					//}
 
 				//}
+				*/
       ?>
+
 			</div>
 			<div class="Form">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
@@ -180,12 +201,11 @@
 
 					<br>
   			Select image to upload:<br>
-		    	<input type="file" name="fileToUpload" id="fileToUpload1">
-					<!--<input type="file" name="fileToUpload2">
-					//<input type="file" name="fileToUpload3">-->
+		    	<input name="upload[]" type="file" multiple="multiple" />
 					<br>
   				<input type="submit" value="Submit Product" name="submit">
 				</form>
+
 
 
       </body>

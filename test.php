@@ -29,3 +29,29 @@ button.admin-accordion.active, button.admin-accordion:hover {
     background-color: white;
 		color:rgb(42,81,79);
 }
+
+
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='uProduct'>Update Product</button>
+</div>
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='rStock' >Remove Stock</button>
+</div>
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='createSale' >Create Sale</button>
+</div>
+
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='dOrder'>Delete Order</a>
+</div>
+
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='uStaff'>Update Staff</button>
+</div>
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='rStaff'>Delete Staff</button>
+</div>
+
+<div class='toolButton'>
+<button class='adminButton' onclick='changeframe(this.id)' id='rCustomer'>Remove Customer</button>
+</div>

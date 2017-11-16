@@ -37,7 +37,7 @@
 	  return $product_thumbresult;
 
 	} ?>
-
+<!--
 <div id='snd_head_global'>
 		<div class='snd_head_big snd_head_big_2'>
 				<a class='head_link' href=''>Free Delivery on Orders</a>
@@ -52,6 +52,7 @@
 				<a class='head_link' href=''>Need Help ? Contact our support team</a>
 		</div>
 </div>
+-->
 <div class='main_div'>
 		<div class='banner'>
 				<img id='ad_banner' src='../images/Icons/ad1.png'>
@@ -62,8 +63,9 @@
 	</div>
 
 	<div class='allProducts'>
+		<p> <img id='arrow_menu' src='../images/Icons/arrow_menu.png'> </p>
 		<div class='filterForm'>
-
+			
 
 				<div id="filterPrice"> <!--holds the different price options-->
 					<form method="post" action="<?php ($_SERVER["PHP_SELF"]);?>">
@@ -83,18 +85,18 @@
 							<input type="checkbox" name="priceFilter[]" value="900">£900 to £1000<br>
 							<input type="checkbox" name="priceFilter[]" value="1000">£1000 to £1100<br>
 						</p>
-						</div> <!--adding a break in the elements for the filter menu-->
+						</div> <!--adding a break in the 	elements for the filter menu-->
 				</div>
 				<div id="filterType">
 					<p class="accordion_ap" >Type: </p>
 					<div class="panel_ap">
 						<p>
-  							<input type="checkbox" name="typeFilter[]" value="Laptop">Laptops<br>
-							<input type="checkbox" name="typeFilter[]" value="Desktop">Desktops<br>
-							<input type="checkbox" name="typeFilter[]" value="Tablet">Tablets<br>
-							<input type="checkbox" name="typeFilter[]" value="Accessory">Accessories<br>
-							<input type="checkbox" name="typeFilter[]" value="Printer">Printers<br>
-							<input type="checkbox" name="typeFilter[]" value="Monitor">Monitors<br><br>
+  							<input type="checkbox" name="typeFilter[]" value="Laptops">Laptops<br>
+							<input type="checkbox" name="typeFilter[]" value="Desktops">Desktops<br>
+							<input type="checkbox" name="typeFilter[]" value="Tablets">Tablets<br>
+							<input type="checkbox" name="typeFilter[]" value="Accessorys">Accessories<br>
+							<input type="checkbox" name="typeFilter[]" value="Printers">Printers<br>
+							<input type="checkbox" name="typeFilter[]" value="Monitors">Monitors<br><br>
 						</p>
 					</div>
 				</div>
@@ -331,54 +333,32 @@
 
 
 <style>
-	 /* Style the buttons that are used to open and close the accordion panel */
-	.accordion_ap {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion_ap.active, .accordion_ap:hover {
-    background-color: #ccc;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel_ap {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-}
+	
 
 </style>
 
 <script>
-
 var acc = document.getElementsByClassName("accordion_ap");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel_ap */
-        this.classList.toggle("active");
-
-        /* Toggle between hiding and showing the active panel_ap */
-        var panel_ap = this.nextElementSibling;
-        if (panel_ap.style.display === "block") {
-            panel_ap.style.display = "none";
-        } else {
-            panel_ap.style.display = "block";
-        }
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
+  }
 }
-
+document.querySelector("#arrow_menu").onclick = function() {
+if (window.getComputedStyle(document.querySelector('.filterForm')).display=='none'){
+document.querySelector(".filterForm").style.display="block";
+} else {
+document.querySelector(".filterForm").style.display="none";
+}
+}
 
 </script>
 

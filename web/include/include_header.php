@@ -43,16 +43,37 @@
 			?>
 		</div>
 		<div class="snd_head">
-				<a class="head_link" href="allProducts.php"> All products </a>
-				<a class="head_link" href="allProducts.php?sort=Laptops"> Laptops </a>
-				<a class="head_link" href="allProducts.php?sort=Desktops"> Desktops </a>
-				<a class="head_link" href="allProducts.php?sort=Tablets"> Ipads And Tablets </a>
-				<a class="head_link" href="allProducts.php?sort=Accessorys"> Accessories </a>
-				<a class="head_link" href="allProducts.php?sort=Printers"> Printers </a>
-				<a class="head_link" href="allProducts.php?sort=Monitors"> Monitors </a>
+				<p class="head_link arrow_drop_h accordion_menu"> <img class='arrow_drop' src='../images/Icons/arrow_drop.png'> </p>
+				<div class="panel_menu">
+					<a class="head_link" href="allProducts.php"> All products </a>
+					<a class="head_link" href="allProducts.php?sort=Laptops"> Laptops </a>
+					<a class="head_link" href="allProducts.php?sort=Desktops"> Desktops </a>
+					<a class="head_link" href="allProducts.php?sort=Tablets"> Ipads And Tablets </a>
+					<a class="head_link" href="allProducts.php?sort=Accessorys"> Accessories </a>
+					<a class="head_link" href="allProducts.php?sort=Printers"> Printers </a>
+					<a class="head_link" href="allProducts.php?sort=Monitors"> Monitors </a>
+				</div>
 		</div>
 
 		</header>
 
 		<body>
 			<div class ="main_body">
+
+
+<script>
+var acc = document.getElementsByClassName("accordion_menu");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  }
+}
+</script>

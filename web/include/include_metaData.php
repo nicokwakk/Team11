@@ -18,6 +18,6 @@ if(!(isset($_SESSION['loggedin'])) || $_SESSION['loggedin'] == false){
 		<title> PC SHOP </title>
 		<link rel="stylesheet" href="../css/stylesheet.css" />
 	    <link rel="stylesheet" media="all and (max-device-width: 500px)" href="../css/mobile.css" />
-	    <link type="text/css" rel="stylesheet" media="all and (max-width: 900px) and (min-device-width:500px)" href="../css/tablet.css"/>
+	    <link type="text/css" rel="stylesheet" media="all and (max-width: 1000px) and (min-device-width:500px)" href="../css/tablet.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	</head>

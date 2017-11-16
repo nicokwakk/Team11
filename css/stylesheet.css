@@ -25,13 +25,18 @@ table, th, tr, td{
 }
 
 #basketpls{
+
 	border:none;
 	color:white;
 	background-color: black;
 	text-align: center;
 	text-decoration: none;
-		width:10px;
-	border-radius: 50%;
+	margin: 1.5px;
+    width:15px;
+    height:15px;
+    border-radius:15px;
+    line-height: 13px;
+
 }
 #compBask{
 	background-color:rgb(42,81,79);
@@ -44,8 +49,11 @@ table, th, tr, td{
 	background-color: black;
 	text-align: center;
 	text-decoration: none;
-	border-radius: 50%;
-		width:10px;
+	margin: 1.5px;
+    width:15px;
+    height:15px;
+    border-radius:15px;
+    line-height: 13px;
 }
 
 #sale{
@@ -59,6 +67,7 @@ table, th, tr, td{
 #basketQuantity{
 	display:inline-block;
 	height:10px;
+	margin: 1%;
 }
 #basketplus{
 	display:inline-block;
@@ -67,9 +76,8 @@ table, th, tr, td{
 }
 #basketminus{
 	display:inline-block;
-		margin: 0 5px;
+	margin: 0 5px;
 	font-size:16px;
-	width:10px;
 }
 .accordionDesc{
 	background-color:#f7f8f9;
@@ -587,6 +595,11 @@ div.panel{
 	border-bottom:1px solid rgb(42,81,79);
 }
 
+.orderTable{
+	width:100%;
+
+}
+
 .toolButton{
 	width:80%;
 	float:left;
@@ -666,12 +679,11 @@ padding-bottom: 5px;
 .filterForm {
 	display: inline-block;
     vertical-align: top;
-	width:25%;
-
+	width:15%;
 }
 
 .products_filtered {
-	width:70%;
+	width:80%;
 	margin-left : 2%;
 	display: inline-block;
     vertical-align: top;
@@ -690,7 +702,14 @@ margin-left: :1%;
 border:1px solid lightgrey;
 background-color:white;
 color:black;
+min-height: 400px;
+vertical-align: top;
 }
+
+.product_thumb:hover {
+	border:2px solid black;
+}
+
 .product_thumbimgcont{
 height:100%;
 width:auto;
@@ -706,6 +725,10 @@ color:black;
 
 .product_thumb .productredirect{
 	display:inline-block;
+}
+
+.productredirect {
+margin-top: 10px;
 }
 .contmain{
 
@@ -1239,6 +1262,8 @@ footer div  a {
 	color: white;
 	padding: 3%;
 	border:0px;
+	vertical-align: bottom;
+
 }
 
 .more_details:hover {
@@ -1288,15 +1313,50 @@ footer div  a {
 
 	background-color: rgb(42,81,79);
 	color: white;
-	padding: 1.5% 6%;
-	margin-top: 1%;
-	margin-right: auto;
-	margin-left: auto;
+	padding: 2% 6%;
+	margin-top: 3%;
+	margin-left: 2%;
 	border:0px;
+	border-radius: 5px;
 }
 
 .btton_filter:hover {
 
 	font-weight:bold;
 	background-color: rgb(34,112,92);
+}
+
+ /* Style the buttons that are used to open and close the accordion panel */
+.accordion_ap {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion_ap.active, .accordion_ap:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel_ap {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#arrow_menu {
+	display: none;
+}
+
+.arrow_drop, .arrow_drop_h {
+	display: none;
 }

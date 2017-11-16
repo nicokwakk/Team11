@@ -7,7 +7,7 @@ var limit = 10;
 
 
 function addInput(divName){
-
+  console.log("1");
      if (counter == limit)  {
 
           alert("You have reached the limit of adding " + counter + " inputs");

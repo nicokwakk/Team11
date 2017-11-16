@@ -18,15 +18,6 @@ echo "
 <div class='toolButton'>
 <button class='adminButton' onclick='changeframe(this.id)' id='aStock' >Add Product</button>
 </div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='uProduct'>Update Product</button>
-</div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='rStock' >Remove Stock</button>
-</div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='createSale' >Create Sale</button>
-</div>
 </div>
 
 <button class='admin-accordion'>Orders</button>
@@ -36,9 +27,6 @@ echo "
 </div>
 <div class='toolButton'>
 <button class='adminButton' onclick='changeframe(this.id)' id='vOrder'>View Order History</button>
-</div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='dOrder'>Delete Order</a>
 </div>
 </div>
 
@@ -50,21 +38,12 @@ echo "
 <div class='toolButton'>
 <button class='adminButton' onclick='changeframe(this.id)' id='aStaff'>Add Staff</button>
 </div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='uStaff'>Update Staff</button>
-</div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='rStaff'>Delete Staff</button>
-</div>
 </div>
 
 <button class='admin-accordion'>Customers</button>
 <div class='admin-panel'>
 <div class='toolButton'>
 <button class='adminButton' onclick='changeframe(this.id)' id='vCustomer'>View Customers</button>
-</div>
-<div class='toolButton'>
-<button class='adminButton' onclick='changeframe(this.id)' id='rCustomer'>Remove Customer</button>
 </div>
 <div class='toolButton'>
 <button class='adminButton' onclick='changeframe(this.id)' id='sendNewsletter'>Send Newsletter</a>

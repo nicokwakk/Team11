@@ -17,6 +17,8 @@ $spec7 = $_POST['spec7'];
 $spec8 = $_POST['spec8'];
 $spec9 = $_POST['spec9'];
 $spec10 = $_POST['spec10'];
-
-
+$query = "CALL  productCheck($id,$name,$brand,$price,$type,$productDesc,$spec1,$spec2,$spec3,$spec4,$spec5,$spec6,$spec7,$spec2,$spec9,$spec10)";
+$prep = $mysql->prepare($query);
+$prep->execute();
+header("location: ../adminpanel.php")
 ?>

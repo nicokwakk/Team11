@@ -228,9 +228,7 @@ footer {
 	width: 101%;
 }
 
-.product_thumb {
-	width: 30%;
-}
+
 
 .main_div {
 	margin-left: auto;
@@ -303,3 +301,34 @@ padding-bottom: 12%;}
 	color: rgb(42,81,79);
 }
 
+.filterForm {
+	width :70%;
+	display:block;
+	margin-left: 10%;
+}
+
+.accordion_ap {
+	width:70%;
+}
+
+.products_filtered {
+	width: 95%;
+	margin: 0;
+	margin-top: 2%;
+}
+
+.btton_filter {
+	width: 30%;
+}
+
+.product_thumb {
+	width: 30%;
+}
+
+#arrow_menu {
+	display: inherit;
+	height: 30px;
+	width: 30px;
+	margin: 1%;
+	margin-left: 10%;
+}

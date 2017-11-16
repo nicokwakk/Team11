@@ -6,8 +6,13 @@
 <?php
 $search = (isset($_GET['productid']) ? $_GET['productid'] : 'x');
 $checked = 3;
-$checkloggedin = isset($_SESSION['loggedin']);
-$loggedin = $_SESSION['loggedin'];
+
+if(isset($_SESSION['loggedin'])){
+	$loggedin = $_SESSION['loggedin'];
+}else{
+	$loggedin = "null";
+}
+
 
 
 if($search == 'x'){
@@ -356,12 +361,7 @@ for (i = 0; i < acc.length; i++) {
 <script>
 // Get the modal
 var checked = "<?php echo $checked ?>";
-var loggedintrue = "<?php ?>";
-if(loggedintrue == null){
-	loggedin = false;
-}else{
-	loggedin = <?php $loggedin ?>;
-}
+var loggedin = <?php echo $loggedin ?>;
 
 var modal = document.getElementById('myModal');
 var btn = document.getElementById('btnReview');
@@ -372,14 +372,15 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function(){
-	if(loggedin != true ){
-		window.location = "login.php?code=8";
-	}else{
+	if(loggedin == "null"){
 		if (checked == 1){
 			modal.style.display = "block";
 		}else{
 			alert("You have already left a review or not ordered this item")
 		}
+
+	}else{
+		window.location = "login.php?code=8";
 	}
 }
 // When the user clicks on <span> (x), close the modal

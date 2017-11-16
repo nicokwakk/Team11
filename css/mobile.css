@@ -13,11 +13,7 @@
 	width:85%;
 }
 
-.snd_head {
-	width : auto;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-}
+
 
 
 .searchForm input {
@@ -26,7 +22,7 @@
 }
 
 .main_body {	
-	margin-top: 30vh;
+	margin-top: 20vh;
 	width: 92%;
 	margin-bottom: 5%;	
 }
@@ -51,4 +47,126 @@
 	margin : 0 6%;
 	padding: 1% 0 8% 0;
 	margin-bottom: 10%;
+}
+
+.product_thumb{
+width:auto;
+padding: 2%;
+}
+
+.filterForm {
+	width :90%;
+}
+
+.accordion_ap {
+	width:70%;
+}
+
+.products_filtered {
+	width: 90%;
+	margin-top: 2%;
+}
+
+.btton_filter {
+	width: 40%;
+}
+
+#arrow_menu {
+	display: inherit;
+	height: 30px;
+	width: 30px;
+}
+
+.main_div {
+	margin-left: auto;
+	margin-right: auto;
+	width : 90%;
+}
+
+.sixty{
+	width: 96%;
+	float: inherit;
+	margin-left: 2%;
+}
+
+.basketTotal{
+	
+	width: 96%;
+	float: inherit;
+	margin-left: 2%;
+	margin-top: 5%;
+}
+
+#link_head {
+	top:0;
+	height: 95%;
+}
+
+.Address_info{
+	width:90%;
+	display:inline-block;
+	margin: 2%;
+}
+
+.Account-details{
+	width:90%;
+	display:inline-block;
+	margin: 2%;
+	
+}
+
+.personal_info{
+	width:90%;
+	display:inline-block;
+	margin: 2%;
+}
+
+.head_link {
+	text-decoration: none;
+	padding: 0.8% 0.5%;
+	display: block;
+}
+
+.snd_head {
+	width : auto;
+	margin-left: 0;
+	
+}
+
+.arrow_drop, .arrow_drop_h {
+	display: inherit;
+}
+
+.arrow_drop_h:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+.arrow_drop {
+	height: 10px;
+	width: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.accordion_menu {
+      
+
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion_menu.active, button.accordion_menu:hover {
+    
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel_menu {
+     padding: 0 18px;
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }

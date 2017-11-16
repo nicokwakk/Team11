@@ -1,14 +1,14 @@
-<?php include('include/include_metaData.php'); ?>
+<?php include_once('include/include_metaData.php'); ?>
 
 <!DOCTYPE html>
 
 <html lang='en'>
 
 	<head>
-		  <?php	//include('include/db.php'); ?>
-		  <?php include('include/include_header.php'); ?>
-			<?php include('include/include_functions.php'); ?>
-			<?php include('include/process_phppostcode.php');?>
+		  <?php	//include_once('include/db.php'); ?>
+		  <?php include_once('include/include_header.php'); ?>
+			<?php include_once('include/include_functions.php'); ?>
+			<?php include_once('include/process_phppostcode.php');?>
 		  </head>
 		  <body>
 		  <div id="tester_input"> <!--For validation of the form -->

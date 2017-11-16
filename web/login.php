@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang='en'>
-<head><?php include('include/include_metaData.php');  ?></head>
+<head><?php include_once('include/include_metaData.php');  ?></head>
 <body style ="background-color: rgb(42,81,79); ">
 <?php
 if(isset($_SESSION['loggedin']) && !(($_SESSION['loggedin']) == false)){

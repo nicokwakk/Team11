@@ -1,7 +1,7 @@
 <?php
 session_start();
 $sessionID = session_id();
-include('db.php');
+include_once('db.php');
 $sesh_query = "Select * from Customers where CustSessionID ='$sessionID'";
 $sesh_check = $mysql->prepare($sesh_query);
 $sesh_check->execute();

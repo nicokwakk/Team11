@@ -44,12 +44,12 @@
 		</div>
 		<div class="snd_head">
 				<a class="head_link" href="allProducts.php"> All products </a>
-				<a class="head_link" href="allProducts.php?sort=Laptop"> Laptops </a>
-				<a class="head_link" href="allProducts.php?sort=Desktop"> Desktops </a>
-				<a class="head_link" href="allProducts.php?sort=Tablet"> Ipads And Tablets </a>
-				<a class="head_link" href="allProducts.php?sort=Accessory"> Accessories </a>
-				<a class="head_link" href="allProducts.php?sort=Printer"> Printers </a>
-				<a class="head_link" href="allProducts.php?sort=Monitor"> Monitors </a>
+				<a class="head_link" href="allProducts.php?sort=Laptops"> Laptops </a>
+				<a class="head_link" href="allProducts.php?sort=Desktops"> Desktops </a>
+				<a class="head_link" href="allProducts.php?sort=Tablets"> Ipads And Tablets </a>
+				<a class="head_link" href="allProducts.php?sort=Accessorys"> Accessories </a>
+				<a class="head_link" href="allProducts.php?sort=Printers"> Printers </a>
+				<a class="head_link" href="allProducts.php?sort=Monitors"> Monitors </a>
 		</div>
 
 		</header>

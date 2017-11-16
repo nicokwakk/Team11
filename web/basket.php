@@ -1,13 +1,13 @@
-<?php include('include/include_metaData.php'); ?>
+<?php include_once('include/include_metaData.php'); ?>
 <head>
-	<?php include('include/include_header.php'); ?>
+	<?php include_once('include/include_header.php'); ?>
 </head>
 <body>
 <?php
 if(!(isset($_SESSION['loggedin']))){
 	header("location: login.php?code=3");
 }else{
-	include('include/db.php');
+	include_once('include/db.php');
 	$sessionid = session_id();
 	$product_query = "select * from basket where CustSessionID = '$sessionid'";
 	$product_prep = $mysql->prepare($product_query);

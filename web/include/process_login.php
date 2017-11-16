@@ -2,7 +2,8 @@
 session_start();
 session_regenerate_id();
 $sessionID = session_id();
-include ('db.php');
+include_once('db.php');
+include_once('include_functions.php');
 $password = $_POST['passw'];
 $email = $_POST['email'];
 $pw_query = "Select HashedVal from logincustview where CustEmail = '$email'";
@@ -15,8 +16,28 @@ foreach($pw_result as $row){
 };
 $pw_check->closeCursor();
 echo "<br>";
+$emailErr=$passwErr="";
+if($_SERVER["REQUEST_METHOD"] == "POST") //sanitizes input before validation
+{
+  if(empty($_POST["email"])){ //checking if required box is empty
+    $emailErr="Email is required";
+  }
+  else{
+    $email = test_input($email); //you collect them at the start
+    $emailErr= testEmail($email);
+  }
+  if(!empty($_POST["passw"])){ //checking if box is empty
+    $passwErr = "Password is required";
+  }
+  else{
+    $password = test_input($_POST["passw"]);
+
+  }
+
+}
 if(password_verify($password, $pw_val)){
   //add code for inputting sessionID into Customers table.
+
   $session_query = "update Customers set CustSessionID = '$sessionID' where CustEmail = '$email'";
   $session_stmt = $mysql->prepare($session_query);
   $session_stmt->execute();

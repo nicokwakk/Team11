@@ -1,14 +1,13 @@
-<?php include('include/include_metaData.php'); ?>
+<?php include_once('include/include_metaData.php'); ?>
 
 <!DOCTYPE html>
 
 <html lang='en'>
 
 	<head>
-		  <?php	//include('include/db.php'); ?>
-		  <?php include('include/include_header.php'); ?>
-			<?php include('include/include_functions.php'); ?>
-			<?php include('include/process_phppostcode.php');?>
+		  <?php	//include_once('include/db.php'); ?>
+			<?php include_once('include/include_functions.php'); ?>
+			<?php include_once('include/process_phppostcode.php');?>
 			<?php include ('include/db.php');?>
 		  </head>
 		  <body>
@@ -27,7 +26,7 @@
 					}
 					if(!empty($_POST["add2"])){ //checking if box is empty
 						$add2 = test_input($_POST["add2"]);
-					}	
+					}
 					if(empty($_POST["city"])){ //checking if required box is empty
 						$cityErr="City is required";
 					}
@@ -53,7 +52,6 @@
 						{
 							echo"<script>alert('Branch Created');</script>";
 						}
-
 					}
 				}
 
@@ -63,17 +61,17 @@
 
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-				1st Line Address: <br> <input type='text' class='form_input_white' name='add1' required='required' value="<?php echo $add1;?>"><br>
-				<span class="error">* <?php echo $add1Err;?></span>
+				1st Line Address <span class="error">* <?php echo $add1Err;?></span> <br>
+				<input type='text' class='form_input_white' name='add1' required='required' value="<?php echo $add1;?>"><br>
 			  <br>
-				2nd Line Address: <br> <input type='text' class='form_input_white' name='add2' value="<?php echo $add2;?>">
-				<span class="error">* <?php echo $add2Err;?></span>
+				2nd Line Address <span class="error">* <?php echo $add2Err;?></span> <br>
+				<input type='text' class='form_input_white' name='add2' value="<?php echo $add2;?>">
 			  <br>
-				Postcode: <br> <input type='text' class='form_input_white' name='postcode' required='required' value="<?php echo $postcode;?>"><br>
-				<span class="error">* <?php echo $postcodeErr;?></span>
+				Postcode 	<span class="error">* <?php echo $postcodeErr;?></span><br>
+				<input type='text' class='form_input_white' name='postcode' required='required' value="<?php echo $postcode;?>"><br>
 			  <br>
-				City: <br> <input type='text' class='form_input_white' name='city' required='required' value="<?php echo $city;?>">
-				<span class="error">* <?php echo $cityErr;?></span>
+				City <span class="error">* <?php echo $cityErr;?></span> <br>
+				<input type='text' class='form_input_white' name='city' required='required' value="<?php echo $city;?>">
 			  <br>
 
 			<div id="CountrySelector">	Country: <br>

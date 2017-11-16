@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
-<head><?php include('include/include_metaData.php');  ?></head>
+<head><?php include_once('include/include_metaData.php');  ?></head>
 <body style ="background-color: white; ">
 <?php
 if(isset($_SESSION['loggedin']) && !(($_SESSION['loggedin']) == false)){
@@ -25,7 +25,7 @@ echo "
 
 echo "
 <p id='log_error'> </p>
-<form method='post' action='include/process_login.php' class=''>
+<form method='post' action='include/process_admin_login.php' class=''>
   Email: <input type='text' class='form_input_white' name='email'><br>
   Password: <input type='password' class='form_input_white' name='passw'><br>
  	<br>

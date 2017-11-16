@@ -12,6 +12,18 @@ body {
 	padding:0;
 }
 
+button.adminButton{
+	border:none;
+	background-color:rgb(42,81,79);
+	text-decoration: none;
+	color:white;
+}
+
+table, th, tr, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
 #basketpls{
 	border:none;
 	color:white;
@@ -104,7 +116,7 @@ span.stars span {
 }
 
 .main_body {
-	min-height:450px;
+	min-height:650px;
 	margin-top: 23vh;
 	position:relative;
 	margin-left: auto;
@@ -113,12 +125,44 @@ span.stars span {
 	margin-bottom: 2%;
 }
 
+.prodSelect{
+	width:30%;
+	margin-left: 35%;
+}
+
 .main_div {
 	margin-left: auto;
 	margin-right: auto;
-	width : 60%;
+	width: 70%;
 }
 
+.adminFunctionality{
+	width:84%;
+	height:800px;
+	display: inline-block;
+}
+
+.adminButton{
+	border:none;
+	background-color:rgb(42,81,79);
+	text-decoration: none;
+	color:white;
+}
+
+.fullPage{
+	width:100%;
+	height:100%;
+}
+
+.admin_div {
+	background-color: rgb(42,81,79);
+	margin-left: auto;
+	margin-right: auto;
+	width: 15%;
+	display: inline-block;
+	float:left;
+	border-right:1px solid rgb(42,81,79);
+}
 header {
 
 	background-color: rgb(42,81,79);
@@ -349,9 +393,9 @@ href{
 
 .link_co_2 {
 
-	
+
 	padding: 2% 15%;
-	
+
 }
 
 
@@ -420,9 +464,10 @@ href{
 }
 
 .banner{
-	width:100%;
+	width:80%;
 	padding: 0px;
-
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .snd_head_big:hover {
@@ -436,6 +481,14 @@ href{
 .del_padding{
 	padding-left: 6px;
 }
+.tool-panel{
+	width:100%;
+	border-bottom: 1px solid rgb(42,81,79);
+}
+
+
+
+
 button.accordion1{
 	background-color:#f7f8f9;
 	color:black;
@@ -515,6 +568,71 @@ div.panel{
 	margin-top: 160px; */
 
 }
+#header-text{
+	vertical-align: middle;
+	text-align: center;
+}
+.admin-header{
+	width:100%;
+	height: 50px;
+	background-color: rgb(42,81,79);
+	color:white;
+}
+
+.header-light{
+	color: rgb(42,81,79);
+	background-color:white;
+	height:49px;
+	width: 15%;
+	border-bottom:1px solid rgb(42,81,79);
+}
+
+.toolButton{
+	width:80%;
+	float:left;
+	height:auto;
+	padding: 5px;
+	margin-bottom: 2px;
+	background-color: rgb(42,81,79);
+	color:white;
+}
+
+div.admin-panel {
+background-color: #f7f7f7;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+button.admin-accordion {
+    background-color: rgb(42,81,79);
+    color: white;
+		text-align: center;
+    cursor: pointer;
+		font-size:16px;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+		border:0px;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.admin-accordion.active, button.admin-accordion:hover {
+    background-color: #f7f7f7;
+		color:rgb(42,81,79);
+}
+
+.toolHeader{
+	background-color: rgb(42,81,79);
+color: white;
+padding-top: 5px;
+padding-left: 5px;
+padding-right: 5px;
+text-align: center;
+padding-bottom: 5px;
+}
 
 .head_link {
 	text-decoration: none;
@@ -539,7 +657,25 @@ div.panel{
 	visibility: hidden;
 }
 .allProducts{
-	text-align: center;
+	text-align: left;
+	width:100%;
+	padding: 2% 0;
+}
+
+
+.filterForm {
+	display: inline-block;
+    vertical-align: top;
+	width:25%;
+
+}
+
+.products_filtered {
+	width:70%;
+	margin-left : 2%;
+	display: inline-block;
+    vertical-align: top;
+	padding: 0 1%;
 }
 
 .product_thumb{
@@ -926,6 +1062,96 @@ padding-bottom: 5%;}
 	vertical-align: top;
 	text-align: center;
 }
+.wishlist_item{
+	width:95%;
+	margin-left:2.5%;
+	margin-bottom:30px;
+	box-shadow: 0px 0px 30px rgba(42,81,79,1);
+}
+.wishlist_item .wishlist_content{
+	padding:10px;
+}
+.wishlist_item p{
+	padding-left:25px;
+}
+
+.wishlist_content{
+	width:100%;
+	float:left;
+	border: 1px solid lightgrey;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display:inline-block;
+}
+.wishlistimg{
+	width:50%;
+	padding-right:4%;
+	border-right:1px solid lightgrey;
+
+}
+.wishlistcolL{
+	width:25%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.wishlistcolR{
+	width:69%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#endoforder{
+	margin-top:30px;
+}
+.order_item{
+	width:95%;
+	margin-left:2.5%;
+	margin-bottom:30px;
+	box-shadow: 0px 0px 30px rgba(42,81,79,1);
+}
+.order_item .order_content{
+	padding:10px;
+}
+.order_item p{
+	padding-left:25px;
+}
+
+.order_content{
+	width:100%;
+	float:left;
+	border: 1px solid lightgrey;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display:inline-block;
+}
+
+.orderimg{
+	width:50%;
+	padding-right:4%;
+	border-right:1px solid lightgrey;
+
+}
+.ordercolL{
+	width:25%;
+	display:inline-block;
+	vertical-align:middle;
+}
+.ordercolR{
+	width:69%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display:inline-block;
+	vertical-aling:right;
+}
+.seperateOrder{
+		width:80%;
+		margin-left: :10%;
+		margin-top:30px;
+		border:1px solid lightgrey;
+		margin-bottom:30px;
+	}
 .btnWishlist {
 	margin-top:10px;
 	width:100%;
@@ -956,6 +1182,10 @@ padding-bottom: 5%;}
 	padding-left:25px;
 }
 
+
+.seperateOrder{
+	border:1px solid lightgrey;
+}
 footer {
 
 	width:100%;
@@ -1049,6 +1279,23 @@ footer div  a {
 }
 
 .Form input[type=submit]:hover {
+
+	font-weight:bold;
+	background-color: rgb(34,112,92);
+}
+
+.btton_filter {
+
+	background-color: rgb(42,81,79);
+	color: white;
+	padding: 1.5% 6%;
+	margin-top: 1%;
+	margin-right: auto;
+	margin-left: auto;
+	border:0px;
+}
+
+.btton_filter:hover {
 
 	font-weight:bold;
 	background-color: rgb(34,112,92);

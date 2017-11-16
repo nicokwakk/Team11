@@ -1,17 +1,35 @@
 <?php
-include ('db.php');
-$passw = $_POST['passw'];
-$email = $_POST['email'];
-$add1 = $_POST['add1'];
-$add2 = $_POST['add2'];
-$postcode = $_POST['postcode'];
-$country = $_POST['country'];
-$city = $_POST['city'];
-$fname = $_POST['fname'];
-$mname = $_POST['mname'];
-$lname = $_POST['lname'];
-$pnum = $_POST['pnum'];
-$nlp = $_POST['nlp'];
+include_once ('db.php');
+include_once ('include_functions');
+
+ //$passw =$email =$add1 =$add2 =$postcode =$country =$city =$fname =
+ //$passw =$_POST['passw'];
+ //$email = =$_POST['email'];
+ //$add1= $_POST['add1'];
+ //$add2 =$_POST['add2'];
+// $postcode =$_POST['postcode'];
+// $country = $_POST['country'];
+ //$city = $_POST['city'];
+ //$fname =$_POST['fname'];
+ //$mname = $_POST['mname'];
+ //$lname = $_POST['lname'];
+// $pnum = $_POST['pnum'];
+ //$nlp = $_POST['nlp'];
+//start_session();
+ $passw =$_POST['passw'];
+ $email = $_POST['email'];
+ $add1= $_POST['add1'];
+ $add2 =$_POST['add2'];
+ $postcode =$_POST['postcode'];
+ $country = $_POST['country'];
+ $city = $_POST['city'];
+ $fname =$_POST['fname'];
+ $mname = $_POST['mname'];
+ $lname = $_POST['lname'];
+ $pnum = $_POST['pnum'];
+ $nlp = $_POST['nlp'];
+//holding the error values
+//$emailErr=$passwErr=$add1Err=$add2Err=$postCodeErr=$countryErr=$cityErr=$fnameErr=$mnameErr=$lnameErr=$pnumErr=$nlpErr="";
 
 echo($passw);
 echo("<br>");

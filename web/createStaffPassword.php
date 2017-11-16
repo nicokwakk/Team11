@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang='en'>	
 	
-	<head><?php include('include/include_metaData.php'); ?>
-		  <?php	//include('include/db.php'); ?>
-		  <?php include('include/include_header.php'); ?>
+	<head><?php include_once('include/include_metaData.php'); ?>
+		  <?php	//include_once('include/db.php'); ?>
+		  <?php include_once('include/include_header.php'); ?>
 		  </head>
 	<body>
 		  <div id="tester_input"> <!--For validation of the form -->

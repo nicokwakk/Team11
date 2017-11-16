@@ -1,13 +1,13 @@
-<?php include('include/include_metaData.php'); ?>
+<?php include_once('include/include_metaData.php'); ?>
 <head>
-	<?php include('include/include_header.php'); ?>
+	<?php include_once('include/include_header.php'); ?>
 </head>
 <body>
 <?php
 if(!(isset($_SESSION['loggedin']))){
 	header("location: login.php?code=3");
 }else{
-	include('include/db.php');
+	include_once('include/db.php');
 	$sessionid = session_id();
 	$cust_query = "select * from customerfull where CustSessionID = '$sessionid'";
 	$cust_prep = $mysql->prepare($cust_query);
@@ -108,14 +108,14 @@ foreach($product_result as $row){
 	}
 	$gtotal = $gtotal + $ptotal;
 		echo "
-		<div class='checkoutitem_content'>
-		<div class='checkoutcolL'>
+		<div class='wishlistitem_content'>
+		<div class='wishlistcolL'>
 		<a href='product.php?productid=$productID'>
-		<img src='$ImagePath/1.jpg' class='checkoutimg'>
+		<img src='$ImagePath/1.jpg' class='wishlistimg'>
 		</a>
 		</div>
-		<div class ='checkoutcolR'>
-		<div class='baskethalf'>
+		<div class ='wishlistcolR'>
+		<div class='wishlisthalf'>
 		<h3>$Brand $productName</h3>
 		<p>£$Price per unit</p>
 		";
@@ -136,12 +136,13 @@ echo "</div>";
 
 $product_prep->closeCursor();
 echo"
+<br>
 <hr>
 <br>
 <div class = 'accountorders'>
 <p><b>Your Orders</b></p>
 ";
-$product_query = "select * from wishlistfull where CustID = '$custId'";
+$product_query = "select * from salesfull where CustID = '$custId' ORDER BY CustOrderID ASC";
 $product_prep = $mysql->prepare($product_query);
 $product_prep->execute();
 $product_result = $product_prep->fetchAll();
@@ -153,45 +154,97 @@ $productName ='';
 	$psubtotal =0;
 	$ptotal =0;
 	$gtotal =0;
+	$curcustorder = 0;
+	$newdiv = 0;
+	$i=0;
 foreach($product_result as $row){
+	$i=$i+1;
 	$productName = $row['ProductName'];
 	$productID = $row['ProductID'];
 	$Brand = $row['Brand'];
-	$Price = $row['Price'];
-	$Salespercent = $row['SalePercentage'];
+	$Price = $row['CalculatedPrice'];
+	$beforeOrderID = $row['CustOrderID'];
+	$status = $row['StatusState'];
+	$dateo = $row['DateOrdered'];
+	$dated = $row['DateDelivered'];
+	$totalprice = $row['TotalPrice'];
+	$delivery = $row['DeliveryType'];
+	$quantity = $row['Quantity'];
+
+		if($curcustorder != $beforeOrderID){
+			if($i > 1){
+				echo"</div>";
+			}
+			$newdiv=1;
+			$tempOrderID = $row['CustOrderID'];
+			echo "<div class='seperateOrder'>";
+			echo "<h4> Order Num: #$tempOrderID</h3>";
+			echo "Status of Order: ";
+			switch($status){
+				case 0:
+					echo "Ordered Placed";
+				break;
+				case 1:
+					echo "Ordered Processing";
+				break;
+				case 2:
+					echo "Ordered Dispatched";
+				break;
+				case 3:
+					echo "Order Delivered";
+				break;
+				case 4:
+					echo "Returned";
+				break;
+				case 5:
+					echo "Courier Returned to Sender";
+				break;
+				default:
+					echo "Unknown(Please contact customer services)";
+					break;
+			}
+			echo "<br>";
+			echo "Current Status: $status<br>";
+			echo "Date Ordered: $dateo<br>";
+			if($dated == NULL){
+				echo "Date Delivered: Not Yet Delivered<br>";
+			}else{
+				echo "Date Delivered: $dated<br>";
+			}
+
+			echo "Total Order Price : $totalprice<br>";
+			if($delivery == "free"){
+				echo "Delivery Method: Free UK Delivery (3-5 days)<br>";
+			}elseif ($delivery == "nd"){
+				echo "Delivery Method: Next Day Delivery<br>";
+			}
+			echo "<br>";
+		}
+	$CustOrderID = $row['CustOrderID'];
+  $curcustorder = $CustOrderID;
 	$ImagePath = $row['ImagePath'];
-	$ptotal = 0;
-	$psubtotal = ($Price);
-	if($Salespercent == 0){
-		$ptotal = $psubtotal;
-	}else{
-		$ptotal = ($psubtotal * (1 - ($Salespercent/100)));
-	}
 	$gtotal = $gtotal + $ptotal;
 		echo "
-		<div class='checkoutitem_content'>
-		<div class='checkoutcolL'>
+		<div class='ordertitem_content'>
+		<div class='ordercolL'>
 		<a href='product.php?productid=$productID'>
-		<img src='$ImagePath/1.jpg' class='checkoutimg'>
+		<img src='$ImagePath/1.jpg' class='orderimg'>
 		</a>
 		</div>
-		<div class ='checkoutcolR'>
-		<div class='baskethalf'>
+		<div class ='ordercolR'>
+		<div class='orderhalf'>
 		<h3>$Brand $productName</h3>
 		<p>£$Price per unit</p>
 		";
-		if($Salespercent != 0){
 		echo "
-		<p id='sale'>Sale Percentage: $Salespercent%</p>
-		";
-		}
-		echo "
-		<p>Sales Price: £$ptotal</p>
 		</div>
 		</div>
 		<br>
 		</div>
 		";
+}
+if($newdiv == 1){
+	echo"</div>";
 }
 echo "
 <hr>

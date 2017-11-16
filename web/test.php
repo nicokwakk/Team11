@@ -1,7 +1,7 @@
-<?php include('include/include_metaData.php'); ?>
+<?php include_once('include/include_metaData.php'); ?>
 <html>
 <head>
-	<?php include('include/include_header.php'); ?>
+	<?php include_once('include/include_header.php'); ?>
 </head>
 
 <p> 
@@ -25,4 +25,4 @@
 
 </p>
 
-<?php include('include/include_footer.php'); ?>
+<?php include_once('include/include_footer.php'); ?>

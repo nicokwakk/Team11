@@ -1,11 +1,13 @@
-<?php include('include/include_metaData.php'); ?>
+<?php include_once('include/include_metaData.php'); ?>
 <html>
 <head>
-	<?php include('include/include_header.php'); ?>
+	<?php include_once('include/include_header.php'); ?>
 </head>
 <?php
 $search = (isset($_GET['productid']) ? $_GET['productid'] : 'x');
-
+$checked = 3;
+$checkloggedin = isset($_SESSION['loggedin']);
+$loggedin = $_SESSION['loggedin'];
 
 
 if($search == 'x'){
@@ -99,8 +101,12 @@ echo "
 				$i++;
 		}
 		$review_get->closeCursor();
-echo "
-		<div id='myModal' class='modal'>
+		if($checked == 1){
+			echo "<div id='myModal' class='modal' style='display:block;'>";
+		}else{
+				echo "<div id='myModal' class='modal'>";
+		}
+		echo"
 		  <div class='modal-content'>
 			  <div class='modal-header'>
 				<span class='close'>&times;</span>
@@ -118,7 +124,8 @@ echo "
 			  <input type='text' name='stars'><br><br>
 			  <input type='submit' name='Submit'>
 			  <br>
-			  <input type='hidden' name='productid' value='$search'>
+				<input type='hidden' name='productid' value='$search'>
+			  <input type='hidden' name='checked' value='$checked'>
 			</form>
 			  </div>
 			  <div class='modal-footer'>
@@ -153,7 +160,7 @@ echo "
 			<input type='hidden' value='$search' name='productid'>
 			</form>
 			";
-			if((isset($_SESSION['loggedin'])) || ($_SESSION['loggedin'] == true)){
+			if((isset($_SESSION['loggedin'])) && ($_SESSION['loggedin'] == true)){
 				$sesh = session_id();
 				$mysql->query( "CALL getCustIDfromSession('$sesh',@userID)" );
 				$userid = 0;
@@ -161,6 +168,12 @@ echo "
 				{
 					$userid=$row['@userID'];
 				}
+			  $mysql->query("CALL checkPurchased('$search','$userid',@checked);");
+			  foreach($mysql->query( "SELECT @checked" ) as $row)
+			  {
+			    $checked=$row['@checked'];
+			  }
+
 
 				$mysql->query( "CALL checkWishList('$search','$userid',@pCount)" );
 				foreach($mysql->query( "SELECT @pCount" ) as $row)
@@ -185,9 +198,7 @@ echo "
 echo "
 			</form>
 
-			<form action='include/checkPurchased.php' method='post'>
-			<button type='submit' class='btnReview'>Write Review</button>
-			<input type='hidden' value='$search' name='productid'>
+			<button class='btnReview' id='btnReview' >Write Review</button>
 			</form>
 		</div>
 		<div class='del_options'>
@@ -273,7 +284,7 @@ foreach($review_result as $reviewrow){
 </body>
 ";
 ?>
-<?php include('include/include_footer.php'); ?>
+<?php include_once('include/include_footer.php'); ?>
 
 <script>
 var acc = document.getElementsByClassName("accordion1");
@@ -344,19 +355,33 @@ for (i = 0; i < acc.length; i++) {
 </script>
 <script>
 // Get the modal
-var modal = document.getElementById('myModal');
+var checked = "<?php echo $checked ?>";
+var loggedintrue = "<?php ?>";
+if(loggedintrue == null){
+	loggedin = false;
+}else{
+	loggedin = <?php $loggedin ?>;
+}
 
+var modal = document.getElementById('myModal');
+var btn = document.getElementById('btnReview');
 // Get the button that opens the modal
-var btn = document.getElementById("btnReview");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
+btn.onclick = function(){
+	if(loggedin != true ){
+		window.location = "login.php?code=8";
+	}else{
+		if (checked == 1){
+			modal.style.display = "block";
+		}else{
+			alert("You have already left a review or not ordered this item")
+		}
+	}
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include_once('db.php');
 if(!(isset($_SESSION['loggedin'])) || ($_SESSION['loggedin'] == false)){
   header('location: ../login.php?code=7');
 }else{

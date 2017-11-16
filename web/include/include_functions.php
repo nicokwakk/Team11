@@ -61,6 +61,15 @@ function testEmail($data)//tests if the email looks correct
 
 }
 
+function testAlphaNumberic($data) //tests if its just letters and white space
+//for valditing alpanumeric data
+{//preg_match searches a string for pattern, returning true if the pattern exists
+  $error=""; //returns blank when no error occurs
+  if(!preg_match("/^[a-zA-Z0-9_]*$/",$data)){ //Disallows anything not a letter or a space
+  return $error="Only letters and white space allowed";
+  }
+}
+
 //To test postcode you use the function checkPostcode in process phppostcode
 /*function filter($filter,$search)//function for applying the filter and search options
 {
